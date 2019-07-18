@@ -2,7 +2,8 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${URL}  http://automationpractice.com/
+${URL}  http://automationpractice.com/index.php
+
 ${BROWSER}  gc
 
 *** Keywords ***
@@ -13,6 +14,7 @@ Sort by price
     Click Element  xpath://*[@id="uniform-selectProductSort"]
     Click Element  xpath://*[@id="selectProductSort"]/option[8]
     Click Element  id:selectProductSort
+
 
 Check Result
     Wait Until Element Contains  xpath://*[@id="center_column"]/ul/li[1]/div/div[2]/h5/a  Printed Summer Dress
