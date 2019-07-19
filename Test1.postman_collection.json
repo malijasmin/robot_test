@@ -16,15 +16,14 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Size = 10\", function () {",
+							"pm.test(\"Test first name = Brety\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.length).to.eql(10);",
+							"    pm.expect(jsonData[0].lengh) === \"Bret\";",
 							"});",
-							"pm.test(\"First username = Bret\", function () {",
+							"pm.test(\"Test second name = Brety\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData[0].username) === \"Bret\";",
-							"});",
-							""
+							"    pm.expect(jsonData[3].lengh) === \"Brety\";",
+							"});"
 						],
 						"type": "text/javascript"
 					}
