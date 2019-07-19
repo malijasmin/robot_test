@@ -2,6 +2,9 @@
 #Library  SeleniumLibrary
 Resource  ./pages/welcome.robot
 Resource  ./pages/catelog.robot
+Suite Setup  เข้า Web หน้าแรก
+Suite Teardown  Close browser
+Test Teardown  welcome.Home
 
 *** Variables ***
 ${URL}  http://automationpractice.com/
@@ -9,7 +12,7 @@ ${BROWSER}  gc
 
 *** Test Cases ***
 Sorting by price
-    เข้า Web หน้าแรก
+    #เข้า Web หน้าแรก
     เข้าไปยังหน้า Summer Dress
     ทำการเลือก Sort ด้วย Price จากมากไปน้อย
     ผลการทำงานต้องแสดงผล จากมากไปน้อย

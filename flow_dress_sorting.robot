@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Test Teardown  Close browser
 
 *** Variables ***
 ${URL}  http://automationpractice.com/
